@@ -1,9 +1,9 @@
 from django.shortcuts import render
 from rest_framework import generics
-from .models import categoria, produto
+from .models import Categoria, Produto
 from .serializers import CategoriaSerializer, ProdutoSerializer
 
-class categorialist(generics.listCreateAPIView):
+class categorialist(generics.ListCreateAPIView):
     queryset = Categoria.objects.all()
     serializer_class = CategoriaSerializer
 
